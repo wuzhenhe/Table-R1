@@ -148,3 +148,16 @@ export PYTHONPATH="/gemini/space/private/TableBench-main:$PYTHONPATH"
 python parse_tablebench_instruction_response_script.py
 python eval_tablebench_script.py
 ```
+
+## Citation
+```bash
+@misc{wu2025tabler1regionbasedreinforcementlearning,
+      title={Table-R1: Region-based Reinforcement Learning for Table Understanding}, 
+      author={Zhenhe Wu and Jian Yang and Jiaheng Liu and Xianjie Wu and Changzai Pan and Jie Zhang and Yu Zhao and Shuangyong Song and Yongxiang Li and Zhoujun Li},
+      year={2025},
+      eprint={2505.12415},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.12415}, 
+}
+```
