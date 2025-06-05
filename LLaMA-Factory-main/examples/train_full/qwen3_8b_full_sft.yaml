@@ -1,0 +1,33 @@
+model_name_or_path: /gemini/space/private/model/Qwen3-8B-Instruct/  # 声明模型地址
+#trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+
+### dataset
+dataset: table_bench_all  # 声明训练数据集
+template: qwen3  # 声明模型模板
+cutoff_len: 4096
+max_samples: 19661  # 声明训练样本数量
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /gemini/space/private/LLaMA-Factory-main/saves/qwen3-8b/full/sft # 声明输出目录
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 64
+learning_rate: 2.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
