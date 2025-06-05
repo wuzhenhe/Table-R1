@@ -1,6 +1,6 @@
 # Table-R1
 
-##RE-SFT
+## RE-SFT
 We implement RE-SFT using the latest version of LLaMa-Factory (up to May 10, 2025).
 Install according to the official documentation.
 ```bash
@@ -58,7 +58,7 @@ export WANDB_DISABLED=true
 FORCE_TORCHRUN=1 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 llamafactory-cli train examples/train_full/qwen3_8b_full_sft_origin.yaml
 ```
 
-##TARPO
+## TARPO
 We use the verl (v0.2) framework for reinforcement learning. Please install the environment following the official instructions.
 To adapt to Qwen3, additional package upgrades are also required:
 ```bash
